@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jessica's Portfolio</title>
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-        <link rel="stylesheet" href="style.css">
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Preahvihear&family=Style+Script&display=swap');
-        </style>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div class="left">Jessica's Portfolio</div>
-                <div class="right">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Projects</a></li>
-                    </ul>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jessica's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Preahvihear&family=Style+Script&display=swap">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Jessica's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="jess.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+            <div class="icons">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/jessica-tiwari-508777247/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/jesca20?tab=repositories" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://www.facebook.com/jessica.tiwari.543/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="mailto:jessica20jes20@gmail.com"  target="_blank"><i class="fa-solid  fa-envelope"></i></a></li>
+                </ul>
+            </div>
+            <div class="mode">
+                <div class="switch" id = "toggele-switch">
+                    <i class="fa-solid fa-moon" id="dark"></i>
+                    <i class="fa-regular fa-lightbulb" id="light"></i>
                 </div>
-                <div class="icons">
-                    <ul>
-                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <main>
-            <div class="leftsec"><p> Hello, Jessica here.<br>
-                    <n>I'm<b> Programmer.</b></n><br>
-                    Welcome to the profile. <br>
-               <but><a href="Jessica_CV.pdf">View my CV</but></a></p></div>
-            <div class="rightsec"><img src="img.png"></div>
-        </main>
-        <about>
-           <div class="about">About</div>
-        </about>
-    </body>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="leftsec">
+            <p>Hello, Jessica here.<br>I'm <b>CEO of Inktopia,Computer Enthusiast,Cloud Associate, Web Developer, Entreprenuer.</b><br>Welcome to my profile.<br> <button> <a href='Jessica_CV.pdf'>Download CV</a></button></p>
+        </section>
+        <section class="rightsec">
+            <img src="img.png" alt="Jessica's Image">
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
 </html>

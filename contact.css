@@ -4,7 +4,7 @@
 }
 
 body {
-    height: 100%;
+    height: 100vh;
     width: 100%;
     background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
@@ -15,11 +15,11 @@ nav {
     align-items: center;
     height: 60px;
     width: 100%;
-    background: radial-gradient(circle, rgba(154,200,166,1) 20%, rgba(122,168,177,1) 100%);
+    background: radial-gradient(circle, rgba(154, 200, 166, 1) 20%, rgba(122, 168, 177, 1) 100%);
 }
 
-nav ul li a:hover{
-    color:rgb(152, 126, 174) ;
+nav ul li a:hover {
+    color: rgb(152, 126, 174);
 }
 
 .left {
@@ -89,67 +89,55 @@ nav ul li a:hover{
 #dark {
     opacity: 0;
 }
-
 main {
+    font-family: 'Preahvihear';
     display: flex;
-    width: 100%;
-}
-
-.leftsec {
-    margin-top: 12%;
-    display: flex;
-    width: 50%;
-    height: 100vh;
-    text-align: center;
     justify-content: center;
+    align-items: center;
+    height: 90vh;
+    font-size: 1.5rem;
 }
 
-
-.leftsec p {
-    font-size: 2rem;
-    font-weight: 600;
-    font-family: Preahvihear;
-    color: rgb(6, 3, 10);
+/* Form styles */
+form {
+    background-image: url("contactbg.png");
+    background-size: cover;
+    padding: 40px; 
+    border-radius: 10px;
+    width: 400px;
 }
 
-b {
-    color: rgb(142, 113, 169);
+.form-group {
+    margin-bottom: 20px;
 }
 
-p a {
-    text-decoration: none;
-    color: aliceblue;
-    font-family: "poppins";
+.form-group label {
+    display: block;
+    margin-bottom: 10px; 
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
 }
 
 button {
-    border-radius: 6px;
-    background-color: rgb(115, 145, 123);
-    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-button:hover{
-    background-color: rgb(142, 113, 169);
+button:hover {
+    background-color: #45a049;
 }
-.rightsec {
-    width: 50%;
-}
-
-img {
-    position: absolute;
-    width: 35%;
-    height: 55vh;
-    margin-top: 17%;
-    margin-left: 10%;
-    top: -100px;
-    right: 50px;
-    animation: animate 4s linear infinite;
-}
-@keyframes animate{
-  50%{
-    right: 30px;
-    top: -90px;
-  }
-}
-
-/*Contact form styling*/
