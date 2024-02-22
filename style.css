@@ -7,7 +7,7 @@ body {
     height: 100%;
     width: 100%;
     background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-    overflow : hidden;
+    overflow: hidden;
 }
 
 nav {
@@ -152,3 +152,4 @@ img {
     top: -90px;
   }
 }
+
