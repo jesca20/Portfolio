@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
   # Portfolio Website Builder
 
@@ -9,3 +10,6 @@
 
   Run `npm run dev` to start the development server.
   
+=======
+# Portfolio
+>>>>>>> 087697e54c2e51b8567a1adfe2e49f02b7d86b48
