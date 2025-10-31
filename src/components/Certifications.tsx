@@ -2,7 +2,12 @@ import { motion } from 'motion/react';
 import { useInView } from 'motion/react';
 import { useRef, useState } from 'react';
 import { Award, Calendar, ExternalLink } from 'lucide-react';
-
+import awsSolutionsArchitectBadge from '../assets/e3041bf6f6e2b3d0b97ee7a5aba3518aefc60108.png';
+import awsCloudArchitectingBadge from '../assets/52833c462d8188beb3e29724a67257177adef571.png';
+import awsMachineLearningBadge from '../assets/006f7c1c13d06235cb05b1abe3c3165d8607f71e.png';
+import awsTechnicalEssentials from '../assets/AWS Technical Essentials.png';
+import GenAIwithAws from '../assets/GenAI with AWS.png';
+import SQL from '../assets/IntermediateSQL.png';
 const certifications = [
   {
     id: 1,
@@ -10,6 +15,8 @@ const certifications = [
     issuer: 'Amazon Web Services',
     date: '2025',
     gradient: 'from-orange-500 to-amber-500',
+    badgeUrl: awsSolutionsArchitectBadge,
+    verificationUrl: 'https://www.credly.com/badges/a1cab7bd-ca91-4b5e-b69f-86e90cc17df9/public_url',
   },
   {
     id: 2,
@@ -17,34 +24,47 @@ const certifications = [
     issuer: 'Amazon Web Services',
     date: '2025',
     gradient: 'from-blue-500 to-cyan-500',
+    badgeUrl: awsMachineLearningBadge,
+    verificationUrl: 'https://www.credly.com/badges/429698b2-77ed-4519-80ca-e18058927624/public_url',
   },
   {
     id: 3,
+    title: 'AWS Academy Cloud Architecting',
+    issuer: 'Amazon Web Services',
+    date: '2025',
+    gradient: 'from-purple-500 to-pink-500',
+    badgeUrl: awsCloudArchitectingBadge,
+    verificationUrl: 'https://www.credly.com/badges/6a70ef90-f535-4f09-bf5d-b48cc1ee9786/public_url',
+  },
+  {
+    id: 4,
     title: 'GenAI with AWS',
     issuer: 'Udacity',
     date: '2025',
     gradient: 'from-purple-500 to-pink-500',
+    badgeUrl: GenAIwithAws,
+        verificationUrl: 'https://www.linkedin.com/posts/jessica-tiwari_generativeai-aws-udacity-activity-7348958905416216577-mVRo?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD0o7RgB61HReEsEJuFVp3k_4YVv0MEj8GI',
+
   },
   {
-    id: 3,
-    title: 'AWS Cloud Architecting',
-    issuer: 'Amazon Web Services',
-    date: '2025',
-    gradient: 'from-orange-500 to-amber-500',
-  },
-  {
-    id: 4,
+    id: 5,
     title: 'Intermediate SQL',
     issuer: 'DataCamp',
     date: '2025',
     gradient: 'from-blue-500 to-cyan-500',
+    badgeUrl: SQL,
+    verificationUrl : 'https://www.datacamp.com/completed/statement-of-accomplishment/course/f429f96c3e02b72fd9829913b2167846dd958fe8?share=true'
+
   },
   {
-    id: 5,
+    id: 6,
     title: 'AWS Technical Essentials',
     issuer: 'Amazon Web Services',
     date: '2025',
     gradient: 'from-purple-500 to-pink-500',
+    badgeUrl: awsTechnicalEssentials,
+    verificationUrl : 'https://www.linkedin.com/posts/jessica-tiwari_aws-cloudcomputing-certification-activity-7305557179095261184-1RJQ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD0o7RgB61HReEsEJuFVp3k_4YVv0MEj8GI'
+
   },
 ];
 
@@ -62,7 +82,6 @@ export function Certifications() {
           className="text-center mb-16"
         >
           <h2 className="mb-4 text-slate-900">Certifications</h2>
-          
         </motion.div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -99,12 +118,23 @@ function CertificationCard({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       whileHover={{ y: -5 }}
-      className="group bg-slate-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 cursor-pointer relative overflow-hidden"
+      className="group bg-slate-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
     >
       {/* Gradient background */}
       <div className={`absolute top-0 left-0 right-0 h-2 bg-gradient-to-r ${certification.gradient}`} />
 
-      <div className="flex items-start gap-4 mb-6 mt-2">
+      {/* Badge Image */}
+      <div className="mb-4 mt-2 flex justify-center">
+        <div className="w-20 h-20 flex items-center justify-center">
+          <img
+            src={certification.badgeUrl}
+            alt={`${certification.title} badge`}
+            className="w-10 h-10 object-contain"
+          />
+        </div>
+      </div>
+
+      <div className="flex items-start gap-4 mb-6">
         <div className={`p-3 rounded-full bg-gradient-to-br ${certification.gradient} text-white shadow-lg`}>
           <Award className="w-5 h-5" />
         </div>
@@ -119,12 +149,18 @@ function CertificationCard({
           <Calendar className="w-4 h-4" />
           <span>{certification.date}</span>
         </div>
-        <motion.div
+        <motion.a
+          href={certification.verificationUrl}
+          target="_blank"
+          rel="noopener noreferrer"
           initial={{ opacity: 0, x: -10 }}
           animate={isHovered ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
           transition={{ duration: 0.2 }}
+          className="cursor-pointer"
+          onClick={(e) => e.stopPropagation()}
         >
-        </motion.div>
+          <ExternalLink className="w-5 h-5 text-slate-400 hover:text-slate-600 transition-colors" />
+        </motion.a>
       </div>
     </motion.div>
   );
