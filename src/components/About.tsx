@@ -53,8 +53,7 @@ export function About() {
           <p className="max-w-3xl mx-auto text-slate-600 leading-relaxed">
             I'm an AWS Certified Solutions Architect Associate and an aspiring Data Engineer with
             hands-on experience in cloud computing, Python, and SQL. I have experience in building
-            data-driven solutions and designing and deploying cloud architectures. I work well in
-            collaborative teams, and I am always eager to learn new technologies.
+            data-driven solutions and designing and deploying cloud architectures, and I am always eager to learn new technologies.
           </p>
         </motion.div>
 
